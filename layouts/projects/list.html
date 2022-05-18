@@ -1,0 +1,16 @@
+{{define "main" -}}
+<div class="projects">
+{{ range .Data.Pages -}}
+  <div class="post project">
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{with .Resources.ByType "image" }}
+    {{range . }}
+    <img src="{{.RelPermalink}}" alt="{{.Title}}" />
+    {{end}}
+    {{ end }}
+    <p class="lead"></p>
+  </div>
+{{- end }}
+</div>
+
+{{- end }}

@@ -1,0 +1,58 @@
+theme = "packbone"
+baseURL = "https://thsh.dk/"
+languageCode = "en-us"
+title = "@thsh"
+copyright = "Thomas Hansen"
+enableGitInfo = "true"
+
+#[module]
+#  [[module.imports]]
+#    path = "https://github.com/spf13/hyde/"
+
+[Author]
+	name = "Thomas Hansen"
+
+[params]
+  description = "Keeping things I write/learn from getting lost."
+  themeColor = "theme-base-0d"
+  ListOfFoo = ["foo1", "foo2", "foo3"]
+  SidebarRecentLimit = 5
+
+[menu]
+#  [[menu.main]]
+#    identifier = "posts"
+#    name = "Posts"
+#    url = "/posts/"
+#    weight = -130
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = -120
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = -110
+#  [[menu.main]]
+#    identifier = "links"
+#    name = "Links"
+#    url = "/links/"
+#    weight = -100
+
+[imaging]
+  resampleFilter = "box"
+  quality = 75
+  anchor = "smart"
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+[frontmatter]
+	date = ["date", "publishDate", "lastmod"]
+	lastmod = [":git", "lastmod", "date","publishDate"]
+	publishDate = ["publishDate", "date"]
+	expiryDate = ["expiryDate"]
+
+github = "https://github.com/thsh1977/"
+
